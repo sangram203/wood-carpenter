@@ -4,7 +4,7 @@
       <h5 class="text-uppercase">Sign in</h5>
       <br>
 
-      <form class="form-type-material" [formGroup]="form" (ngSubmit)="login()">
+      <form class="form-type-material" [formGroup]="form" (ngSubmit)="login(form)">
         <div class="form-group">
           <input type="text" class="form-control" id="username" formControlName="username">
           <label for="username">Username</label>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="form-group">
-          <button class="btn btn-bold btn-block" type="submit" [ngClass]="{'btn-success':form.valid,'btn-secondary':!form.valid }" disabled="!form.valid">Login</button>
+          <button class="btn btn-bold btn-block" type="submit" [ngClass]="{'btn-success':form.valid,'btn-secondary':!form.valid }" [disabled]="!form.valid">Login</button>
         </div>
       </form>
 

@@ -24,6 +24,6 @@ import { FormGroup, FormControl,Validators} from '@angular/forms';
    }
 
    login(authdata){
-     console.log(authdata);
+     console.log(authdata.value);
    }
  }
