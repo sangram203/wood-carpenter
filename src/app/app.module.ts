@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavComponent } from './includes/navbar/nav.component';
@@ -13,6 +13,7 @@ import { PathMatched } from './common/services/pathmatch.service';
   imports:      [ 
     BrowserModule, 
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {path:'',redirectTo:'home',pathMatch:'full'},
       {path:'home', component:HomeComponent},
