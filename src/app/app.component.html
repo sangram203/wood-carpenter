@@ -1,2 +1,8 @@
 
-  <router-outlet></router-outlet>
+   <app-nav *ngIf="!pathmatched.matchedPathLogin()"></app-nav>
+    <main class="main-container">
+      <div class="main-content">     
+         <router-outlet></router-outlet>
+      </div>
+     <app-footer *ngIf="!pathmatched.matchedPathLogin()"></app-footer>
+    </main>

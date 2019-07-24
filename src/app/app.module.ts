@@ -7,6 +7,7 @@ import { NavComponent } from './includes/navbar/nav.component';
 import { FooterComponent } from './includes/footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { PathMatched } from './common/services/pathmatch.service';
 
 @NgModule({
   imports:      [ 
@@ -25,6 +26,7 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     HomeComponent 
     ],
+    providers:[PathMatched],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
