@@ -6,9 +6,9 @@
 
       <form class="form-type-material" [formGroup]="form" (ngSubmit)="login(form)">
         <div class="form-group">
-          <input type="text" class="form-control" id="username" formControlName="username">
+          <input type="text" class="form-control" id="username" formControlName="email">
           <label for="username">Username</label>
-          <div class="alert alert-danger" *ngIf="username.touched && username.invalid">
+          <div class="alert alert-danger" *ngIf="email.touched && email.invalid">
             <div>Username is required</div>
           </div>
         </div>
