@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl,Validators} from '@angular/forms';
+import { HttpService } from '../common/services/http.service';
+
 @Component({
   selector:'app-login',
   templateUrl:'./login.component.html',
@@ -7,6 +9,7 @@ import { FormGroup, FormControl,Validators} from '@angular/forms';
 })
 
  export class LoginComponent{
+   constructor(private httpservice:HttpService){}
    form = new FormGroup({
      username: new FormControl('',[
        Validators.required
@@ -24,6 +27,11 @@ import { FormGroup, FormControl,Validators} from '@angular/forms';
    }
 
    login(authdata){
-     console.log(authdata.value);
+     this.httpservice.postData(authdata)
+     .subscribe((result)=>{
+       console.log(result);
+     }, error(err){
+       console.log(err)
+     })
    }
  }
